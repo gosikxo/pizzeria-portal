@@ -4,7 +4,7 @@ import { component } from './Login.scss';
 function Login() {
   return (
     <div className={component}>
-      Login
+      <h1>Login</h1>
     </div>
   );
 }

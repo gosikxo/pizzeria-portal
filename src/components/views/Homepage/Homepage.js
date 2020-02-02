@@ -4,7 +4,7 @@ import { component } from './Homepage.scss';
 function Homepage() {
   return (
     <div className={component}>
-      Homepage
+      <h1>Homepage</h1>
     </div>
   );
 }

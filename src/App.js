@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
-import { PUBLIC_URL } from './settings.js';
+import { PUBLIC_URL } from './settings';
 import MainLayout from './components/layout/MainLayout';
 import Homepage from './components/views/Homepage/Homepage';
 import Login from './components/views/Login/Login';
