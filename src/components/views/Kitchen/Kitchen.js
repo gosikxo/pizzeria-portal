@@ -1,5 +1,5 @@
 import React from 'react';
-import { component } from './Kitchen.scss';
+import { component } from './Kitchen.module.scss';
 
 function Kitchen() {
   return (

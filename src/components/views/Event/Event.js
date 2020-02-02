@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import { component } from './Event.scss';
+import { component } from './Event.module.scss';
 
 function Event({match: { params: { id }}}) {
   return (

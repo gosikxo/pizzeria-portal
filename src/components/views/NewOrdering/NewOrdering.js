@@ -1,5 +1,5 @@
 import React from 'react';
-import { component } from './NewOrdering.scss';
+import { component } from './NewOrdering.module.scss';
 
 function NewOrdering() {
   return (

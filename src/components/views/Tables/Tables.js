@@ -1,5 +1,5 @@
 import React from 'react';
-import { component } from './Tables.scss';
+import { component } from './Tables.module.scss';
 import { Link } from 'react-router-dom';
 
 function Tables() {

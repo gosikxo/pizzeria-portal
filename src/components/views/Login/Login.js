@@ -1,5 +1,5 @@
 import React from 'react';
-import { component } from './Login.scss';
+import { component } from './Login.module.scss';
 
 function Login() {
   return (

@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { component } from './Booking.scss';
+import { component } from './Booking.module.scss';
 
 function Booking({match: { params: { id }}}) {
   return (

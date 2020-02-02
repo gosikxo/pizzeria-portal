@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import { component } from './Order.scss';
+import { component } from './Order.module.scss';
 
 function Order({match: { params: { id }}}) {
   return (
