@@ -21,7 +21,7 @@ import styles from './Ordering.module.scss';
 
 function TablePanel({ id, orders, goToOrder, deliverOrder }) {
   return (
-    <ExpansionPanel>
+    <ExpansionPanel elevation={5}>
       <ExpansionPanelSummary
         expandIcon={<ExpandMoreIcon />}
         aria-controls="panel1a-content"
@@ -38,7 +38,7 @@ function TablePanel({ id, orders, goToOrder, deliverOrder }) {
           </Grid>
           <Grid>
             {orders.length > 0 &&
-              <TableContainer>
+              <TableContainer className={styles.table}>
                 <Table aria-label="simple table">
                   <TableHead>
                     <TableRow>
@@ -58,7 +58,7 @@ function TablePanel({ id, orders, goToOrder, deliverOrder }) {
                         <TableCell align="right" onClick={() => goToOrder(order.id)}>{order.id}</TableCell>
                         <TableCell align="right" onClick={() => goToOrder(order.id)}>{order.status}</TableCell>
                         <TableCell align="right" onClick={() => goToOrder(order.id)}>{order.sum}</TableCell>
-                        <TableCell align="right">{order.status === 'ready' && <Button size="small" color="secondary" onClick={() => deliverOrder(order.id)}>Deliver order</Button>}</TableCell>
+                        <TableCell align="right">{order.status === 'ready' && <Button size="small" color="primary" onClick={() => deliverOrder(order.id)}>Deliver order</Button>}</TableCell>
                       </TableRow>
                     ))}
                   </TableBody>

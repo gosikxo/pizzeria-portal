@@ -1,6 +1,7 @@
 import React from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import { Provider } from 'react-redux';
+import { ThemeProvider } from '@material-ui/core/styles';
 import store from './redux/store';
 
 import { PUBLIC_URL } from './settings';
@@ -14,26 +15,29 @@ import Ordering from './components/views/Ordering/Ordering';
 import NewOrderContainer from './components/views/NewOrder/NewOrderContainer';
 import Order from './components/views/Order/Order';
 import Kitchen from './components/views/Kitchen/Kitchen';
+import theme from './theme';
 
 
 function App() {
   return (
     <Provider store={store}>
-      <BrowserRouter basename={`${PUBLIC_URL}/panel`}>
-        <MainLayout>
-          <Switch>
-            <Route exact path={'/'} component={Homepage} />
-            <Route exact path={'/login'} component={Login} />
-            <Route exact path={'/tables'} component={Tables} />
-            <Route exact path={'/tables/booking/:id'} component={Booking} />
-            <Route exact path={'/tables/event/:id'} component={Event} />
-            <Route exact path={'/ordering/'} component={Ordering} />
-            <Route exact path={'/ordering/new/'} component={NewOrderContainer} />
-            <Route exact path={'/ordering/order/:id'} component={Order} />
-            <Route exact path={'/kitchen'} component={Kitchen} />
-          </Switch>
-        </MainLayout>
-      </BrowserRouter>
+      <ThemeProvider theme={theme}>
+        <BrowserRouter basename={`${PUBLIC_URL}/panel`}>
+          <MainLayout>
+            <Switch>
+              <Route exact path={'/'} component={Homepage} />
+              <Route exact path={'/login'} component={Login} />
+              <Route exact path={'/tables'} component={Tables} />
+              <Route exact path={'/tables/booking/:id'} component={Booking} />
+              <Route exact path={'/tables/event/:id'} component={Event} />
+              <Route exact path={'/ordering/'} component={Ordering} />
+              <Route exact path={'/ordering/new/'} component={NewOrderContainer} />
+              <Route exact path={'/ordering/order/:id'} component={Order} />
+              <Route exact path={'/kitchen'} component={Kitchen} />
+            </Switch>
+          </MainLayout>
+        </BrowserRouter>
+      </ThemeProvider>
     </Provider>
   );
 }
